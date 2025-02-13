@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR ZONE FREE HACK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+            width: 320px;
+        }
+
+        h1 {
+            color: #ff4b2b;
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #result-box {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            outline: none;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        button:disabled {
+            background: gray;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.8);
+        }
+
+        p {
+            color: white;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #ff416c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Toast Notification */
+        .toast {
+            visibility: hidden;
+            min-width: 280px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 12px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            visibility: visible;
+            animation: fadeInOut 3s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0% {opacity: 0;}
+            20% {opacity: 1;}
+            80% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div> <!-- Particle Background -->
+
+    <div class="container">
+        <h1>HR ZONE FREE HACK</h1>
+        <h2>Your Result</h2>
+        <div id="result-box">??</div>
+        <button id="generate-btn" onclick="generateResult()">Show Result</button>
+        <p>📢 Telegram: <a href="https://t.me/+ZUUzdVW0JYU1YmZl" target="_blank">@yourchannel</a></p>
+    </div>
+
+    <div id="toast" class="toast">⏳ Please wait 1 minute before trying again.</div>
+
+    <script>
+        function generateResult() {
+            let results = ["BIG", "SMALL"];
+            let randomResult = results[Math.floor(Math.random() * results.length)];
+            document.getElementById("result-box").innerText = randomResult;
+
+            // Disable button
+            let button = document.getElementById("generate-btn");
+            button.disabled = true;
+
+            // Show Toast Notification
+            showToast("⏳ Please wait 1 minute before trying again.");
+
+            // Enable button after 1 minute
+            setTimeout(() => {
+                button.disabled = false;
+                showToast("✅ You can now try again!");
+            }, 60000);
+        }
+
+        function showToast(message) {
+            let toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+
+        // Particle Background
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
+        script.onload = function () {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {"value": 80},
+                    "size": {"value": 2},
+                    "move": {"speed": 1.5},
+                    "line_linked": {"enable": true, "opacity": 0.3}
+                }
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+
+</body>
+</html>
